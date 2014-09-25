@@ -86,5 +86,3 @@ class Mastermind
     game
   end
 end
-
-# Mastermind.new.start
