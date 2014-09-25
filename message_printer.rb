@@ -8,7 +8,7 @@ class MessagePrinter
   end
 
   def give_space
-    stream.puts "\n\n\n\n"
+    stream.puts "\n\n\n\n".colorize(31)
   end
 
   def welcome
