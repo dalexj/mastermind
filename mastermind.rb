@@ -34,8 +34,6 @@ class Mastermind
     command == "q" || command == "quit"
   end
 
-  private
-
   def process_first_commands
     case
     when quit?
@@ -89,4 +87,4 @@ class Mastermind
   end
 end
 
-Mastermind.new.start
+# Mastermind.new.start

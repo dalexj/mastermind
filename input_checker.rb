@@ -40,7 +40,7 @@ class InputChecker
 
   def matches_colors?
     regex = Regexp.new("[#{@mastermind.difficulty.colors_first_letters}]{4}")
-    @mastermind.command =~ regex  
+    @mastermind.command =~ regex
   end
 
   def guess
@@ -65,7 +65,7 @@ class InputChecker
   end
 
   def valid_difficulty?
-    "bia".include?(@mastermind.command)
+    "bia".chars.any? { |char| char == @mastermind.command}
   end
 
   def select_difficulty
