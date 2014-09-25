@@ -10,8 +10,8 @@ class Mastermind
 
   def initialize(stdout = $stdout, stdin = $stdin)
     @command = ""
-    @printer = MessagePrinter.new(stdout)
     @stdin = stdin
+    @printer = MessagePrinter.new(stdout)
     @difficulty = Difficulty.beginner
     @input_checker = InputChecker.new(self)
   end

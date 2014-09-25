@@ -25,7 +25,9 @@ or (q)uit?".colorize(Color::GREEN_TEXT)
   end
 
   def instructions
-    stream.puts "How to play mastermind" # TODO: WRITE THIS
+    stream.print "I the computer, make a sequence of 4-8 colors, you must guess \
+which colors they are and in what position they are in. "# .colorize(Color::BLUE_TEXT)
+    stream.puts "git r3ddy 4 madnes u nub".colorize(Color::RED_TEXT)
   end
 
   def game_start(difficulty)
@@ -55,7 +57,7 @@ with #{results[1]} in the correct positions".colorize(Color::GREEN_TEXT)
   end
 
   def invalid_input
-    stream.puts "Invalid input".colorize(Color::RED_TEXT)
+    stream.puts "Get gud plz u nub".colorize(Color::RED_TEXT)
   end
 
   def guess_request(guess_type = "next")

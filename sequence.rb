@@ -16,7 +16,7 @@ class Sequence
     correct_elements = guess.chars.uniq.count { |char| code.include?(char) }
 
     correct_positions = guess.chars.zip(code.chars)
-    .count { |pair| pair.reduce(:==) }
+      .count { |pair| pair.reduce(:==) }
 
     [correct_elements, correct_positions]
   end

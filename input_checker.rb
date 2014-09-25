@@ -39,9 +39,8 @@ class InputChecker
   end
 
   def matches_colors?
-    @mastermind.command.chars.all? do |char|
-      @mastermind.difficulty.colors_first_letters.include?(char)
-    end
+    regex = Regexp.new("[#{@mastermind.difficulty.colors_first_letters}]{4}")
+    @mastermind.command =~ regex  
   end
 
   def guess
