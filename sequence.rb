@@ -1,10 +1,11 @@
 class Sequence
   attr_reader :code
 
-  def initialize(difficulty)
+  def initialize(difficulty, override = nil)
     @code = (1..difficulty.code_length).collect do
       difficulty.colors[rand(difficulty.colors.length)][0]
     end.join.downcase
+    @code = override if override
   end
 
   def equals?(guess)
