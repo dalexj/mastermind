@@ -49,7 +49,7 @@ class InputChecker
       @mastermind.printer.win(@mastermind.game)
     else
       @mastermind.printer.results(
-      @mastermind.command, @mastermind.game.score(@mastermind.command))
+        @mastermind.command, @mastermind.game.score(@mastermind.command))
     end
   end
 

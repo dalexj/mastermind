@@ -66,4 +66,12 @@ class MastermindTest < Minitest::Test
 
     assert_equal 3, game.game.guesses
   end
+
+  def test_game_over
+    tester = StringIO.new("b")
+    game = Mastermind.new(StringIO.new, tester)
+    refute game.game_over?
+    game.request_difficulty
+    assert game.game_over?
+  end
 end
