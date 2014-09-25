@@ -1,5 +1,5 @@
 require_relative "sequence"
-require_relative "message_printer"
+require_relative "difficulty"
 require "time"
 
 class Game

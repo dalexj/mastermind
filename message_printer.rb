@@ -12,7 +12,7 @@ class MessagePrinter
   end
 
   def welcome
-    stream.puts "Welcome to MASTERMIND".colorize(Color::BLUE_BACKGROUND)
+    stream.puts "Welcome to MASTERMIND, SUCKER".colorize(Color::BLUE_BACKGROUND)
   end
 
   def initial_request
@@ -21,12 +21,12 @@ or (q)uit?".colorize(Color::GREEN_TEXT)
   end
 
   def goodbye
-    stream.puts "Goodbye!"
+    stream.puts "Cya sucker!"
   end
 
   def instructions
     stream.print "I the computer, make a sequence of 4-8 colors, you must guess \
-which colors they are and in what position they are in. "# .colorize(Color::BLUE_TEXT)
+which colors they are and in what position they are in. "
     stream.puts "git r3ddy 4 madnes u nub".colorize(Color::RED_TEXT)
   end
 
@@ -48,7 +48,8 @@ game.".colorize(Color::CYAN_TEXT)
     minutes, seconds = game.seconds_since_start.divmod(60)
     stream.puts "Congratulations! You guessed the sequence \
 '#{game.secret_code}' in #{game.guesses} guesses over #{minutes} minutes, \
-#{seconds} seconds.".colorize(Color::BLUE_BACKGROUND)
+#{seconds} seconds... but that one was an easy one anyway. You should try \
+something harder, nub".colorize(Color::BLUE_BACKGROUND)
   end
 
   def results(guess_code, results)
@@ -61,7 +62,7 @@ with #{results[1]} in the correct positions".colorize(Color::GREEN_TEXT)
   end
 
   def guess_request(guess_type = "next")
-    stream.puts "What's your #{guess_type} guess?".colorize(Color::MAGENTA_TEXT)
+    stream.puts "What's your #{guess_type} guess, scrub?".colorize(Color::MAGENTA_TEXT)
   end
 
   def difficulty_request
